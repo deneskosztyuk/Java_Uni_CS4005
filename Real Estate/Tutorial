@@ -1,0 +1,95 @@
+public class Property
+{   
+    /*
+    int
+    boolean
+    double
+    float
+    byte
+    char
+    short
+    long
+    String 
+     */
+    
+    String address;
+    int monthlyRent;
+    boolean isOccupied;
+    String tenantName;
+    
+    public Property(String pAddress, int pMonthlyRent)
+    {
+        address = pAddress;
+        monthlyRent = pMonthlyRent;
+        tenantName = "";
+        isOccupied = false;
+    
+    
+    }
+    
+    
+    public String getAddress()
+    {
+        return address; // String
+    
+    }
+    
+    public int getMonthlyRent()
+    {    
+        return monthlyRent; // int
+    
+    }
+    
+    public String getTenantName()
+    {
+        return tenantName; // String
+    
+    }
+    
+    public void setMonthlyRent(int setMonthlyRent)
+    {
+        monthlyRent = setMonthlyRent;
+    }
+
+    public void addTenantToProperty(String pTenantName)
+    {
+        if (!isOccupied)
+        {
+            tenantName = pTenantName;
+            isOccupied = true;
+            
+        
+        }
+        else
+        {
+            System.out.println("Tenant is occupied");
+            isOccupied = false;
+            
+        
+        
+        }
+        
+    }
+
+    public void finalState()
+    {
+        if (isOccupied)
+        {
+            System.out.println("The property at the address " + address + " with monthly rent $" + monthlyRent + " is occupied by " + tenantName);
+        
+        }
+        
+        else
+        {
+            System.out.println("The property at the address " + address + " with monthly rent $" + monthlyRent + " is free to rent. ");
+        
+        }
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+    }
+
+
+
+}
